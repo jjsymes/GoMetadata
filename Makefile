@@ -14,3 +14,6 @@ test-main: # run tests
 
 build: # build binary
 	cd cmd/gom && go build cmd/gom/main.go
+
+git-mirror: # mirror the repo to git hub
+	git push --mirror https://github.com/jjsymes/GoMetadata.git
