@@ -4,6 +4,12 @@ import (
 	"testing"
 )
 
+func TestCanTestMetadata(t *testing.T) {
+	var result int = 1
+	if result != 1 {
+		t.Error("Failed to test.")
+	}
+}
 // func TestGetMetadata_BadData(t *testing.T) {
 // 	cases := []struct {
 // 		Name  string
