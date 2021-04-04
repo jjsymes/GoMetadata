@@ -10,7 +10,7 @@ test-%: # run tests
 	go test internal/$*
 
 test-main: # run tests
-	go test cmd/gom/main_test.go
+	go test cmd/gom
 
 build: # build binary
 	cd cmd/gom && go build cmd/gom/main.go
