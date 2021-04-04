@@ -15,13 +15,18 @@ func main() {
 
 	flag.Parse()
 	args := flag.Args()
+	fmt.Println("******* GOM *******")
 	if helpFlagLong || helpFlag {
 		help()
 	}
-	fmt.Println("Arguments provided to goMetadata command: ", args)
-	for i, arg := range args {
-		fmt.Println("File ", i, ": ", arg)
-		fmt.Println(metadata.GetMetadata(arg))
+	if len(args) == 0 {
+		fmt.Println("No files provided for processing, please provide a path to the command to use this tool.")
+	} else {
+		fmt.Println("Files to process:", args)
+		for i, arg := range args {
+			fmt.Println("File ", i, ": ", arg)
+			fmt.Println(metadata.GetMetadata(arg))
+		}
 	}
 }
 
